@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắc bóng đèn</title>
+</head>
+<body>
+<script>
+    let ElectricLamp = function (status) {
+        this.status = status;
+        this.statusElectricLamp = function () {
+            this.status = !this.status;
+            // if (this.status) {
+            //     this.status = false;
+            // } else {
+            //     this.status = true;
+            // }
+        };
+    }
+    let SwitchButton = function (statusButton) {
+        this.statusButton = statusButton;
+        this.switchonoffElectricLamp = function (Electric) {
+            this.statusButton = !this.statusButton;
+            // if(this.statusButton){
+            //     this.statusButton=false;
+            // }else {
+            //     this.statusButton=true;
+            // }
+            Electric.statusElectricLamp();
+        };
+    }
+    let Electric1 = new ElectricLamp(true);
+    let button1 = new SwitchButton(true);
+</script>
+</body>
+</html>
